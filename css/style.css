@@ -1,0 +1,67 @@
+/**
+ * 環原
+ */
+body{
+	text-align: center;
+}
+h1{
+	font-size: 100px;
+	line-height: 100px;
+}
+
+/**
+ * 重要
+ */
+h1,h2,.each-step{
+	font-family: 'ヒラギノ明朝 Pro W3','Hiragino Mincho Pro','HiraMinProN-W3','ＭＳ 明朝','MS Mincho',serif;
+}
+.wrapper{
+	width:960px;
+	margin:0 auto;
+}
+.block{
+	border-top: 5px #000 solid;
+	padding:22px;
+}
+
+/**
+ * 各單元
+ */
+.header{
+	padding:32px 24px;
+	background:#000000 ;
+	text-align: left;
+}
+h1{
+	color:#ffffff;
+	padding-bottom: 8px;
+}
+.story{
+	width:340px;
+	color:#ffffff;
+	font-size: 17px;
+}
+
+.three-steps{
+	padding: 29px;
+	width: 600px;
+	margin: 0 auto;
+}
+.each-step{
+	display:table-cell;
+	font-weight: bolder;
+	font-size: 17px;
+	line-height:24px;
+}
+.content h2{
+	color:#148E81;
+}
+.also-need h2{
+	color:#DDC724;
+}
+.want-know h2{
+	color:#EE612B;
+}
+.footer{
+	padding:;
+}
