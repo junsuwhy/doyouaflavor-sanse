@@ -3,10 +3,18 @@
  */
 body{
 	text-align: center;
+	font-size: 16px;
 }
 h1{
 	font-size: 100px;
 	line-height: 100px;
+	display: inline-block;
+}
+div{
+	margin:0 auto;
+}
+a{
+	text-decoration: none;
 }
 
 /**
@@ -23,14 +31,48 @@ h1,h2,.each-step{
 	border-top: 5px #000 solid;
 	padding:22px;
 }
+.bolder{
+	font-weight: bolder;
+}
 
 /**
  * 各單元
  */
 .header{
+	background: url(../img/header.png) no-repeat;
 	padding:32px 24px;
-	background:#000000 ;
+	/*background:#000000 ;*/
 	text-align: left;
+	height:600px;
+	position: relative;
+}
+.circle{
+	width:280px;
+	height:280px;
+	background-color: rgba(255,255,255,0.5);
+	border-radius:140px;
+	position: absolute;
+	top: 140px;
+	/*background-color: #fff;*/
+	opacity: 0;
+}
+.hide{
+/*	opacity: 0;*/
+}
+/*.header>div:hover {
+  animation-duration: 2s;
+  animation-name: fadeOut;
+}*/
+
+/*.header>div:hover{
+	background-color: rgba(255,255,255,0.5);
+	opacity: 0.5;
+}*/
+.baiwei{
+	left: 180px;
+}
+.sanse{
+	right:220px;
 }
 h1{
 	color:#ffffff;
@@ -40,21 +82,35 @@ h1{
 	width:340px;
 	color:#ffffff;
 	font-size: 17px;
+	margin-left: 0;
 }
 
 .three-steps{
 	padding: 29px;
 	width: 600px;
 	margin: 0 auto;
+	display:inline-block;
 }
 .each-step{
-	display:table-cell;
+	display:inline-block;
 	font-weight: bolder;
 	font-size: 17px;
 	line-height:24px;
 }
-.content h2{
+.content .color,.content h2{
 	color:#148E81;
+}
+.content .color{
+	font-weight: bolder;
+}
+.schedule{
+	border:3px #000 solid;
+	width:280px;
+	margin: 10px auto;
+	padding:20px;
+}
+.start-cook{
+	padding:12px;
 }
 .also-need h2{
 	color:#DDC724;
