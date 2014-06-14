@@ -30,11 +30,25 @@ $.extend( $.fn ,{
 	 * @return {[type]}   [description]
 	 */
 	ff:function(s){
+		s=isNaN(parseFloat(s))?0:parseFloat(s);
 		var x = this;
 		$(window).scroll(function(event) {
 			if((x.offset().top - $(window).scrollTop())<($(window).height()-x.height())){
 				setTimeout(function(){
 					x.removeClass('hide').addClass('flipInX');
+				}, s);
+			}
+		});
+	},
+	bu:function(s){
+		var x = this;
+		x.addClass('hide');
+
+		s=isNaN(parseFloat(s))?0:parseFloat(s);
+		$(window).scroll(function(event) {
+			if((x.offset().top - $(window).scrollTop())<($(window).height()-x.height())){
+				setTimeout(function(){
+					x.removeClass('hide').addClass('animated bounceInUp');
 				}, s);
 			}
 		});
@@ -55,5 +69,10 @@ $('.header').xp();
 for (var i = 1; i < 4; i++) {
 	$('.step'+i).ff(i*300);
 };
+
+// $().ready(function(){
+// 	$('.position img').bu();	
+// });
+
 
 

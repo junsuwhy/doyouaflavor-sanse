@@ -26,10 +26,12 @@ h1,h2,.each-step{
 .wrapper{
 	width:960px;
 	margin:0 auto;
+	border-bottom: 40px #000 solid;
 }
 .block{
 	border-top: 5px #000 solid;
 	padding:22px;
+	width:600px;
 }
 .bolder{
 	font-weight: bolder;
@@ -46,7 +48,7 @@ h1,h2,.each-step{
 	/*padding:0px 24px;*/
 	/*background:#000000 ;*/
 	/*line-height: 600px;*/
-	text-align: left;
+	text-align: center;
 	height:624px;
 	position: relative;
 }
@@ -55,11 +57,11 @@ h1,h2,.each-step{
 	height:280px;
 	position: relative;
 	float:left;
-	margin-top: 200px;
+	margin-top: 100px;
 	/*top: 140px;*/
 }
 .logo.baiwei{
-	margin-left: 230px;
+	margin-left: 130px;
 }
 /*.logo.sanse{
 	right:220px;
@@ -70,38 +72,29 @@ h1,h2,.each-step{
 	background-color: rgba(255,255,255,0.5);
 	border-radius:140px;
 	position: absolute;
-	top: -10px;
-	left: -46px;
+	top: -14px;
+	/*left: -46px;*/
 	/*background-color: #fff;*/
 	opacity: 0;
+}
+.logox{
+	background: url(../img/logo2.png) 0 50% no-repeat;
+	width:100px;
+	/*height:100px;*/
 }
 .circle{
 	margin:auto;
 }
-/*.header>div:hover {
-  animation-duration: 2s;
-  animation-name: fadeOut;
-}*/
-
-/*.header>div:hover{
-	background-color: rgba(255,255,255,0.5);
-	opacity: 0.5;
-}*/
-/*.circle.baiwei{
-	left: 180px;
-}
-.circle.sanse{
-	right:220px;
-}*/
 h1{
 	color:#ffffff;
 	padding-bottom: 8px;
 }
 .story{
-	width:340px;
+	clear:both;
+	/*width:340px;*/
 	color:#ffffff;
 	font-size: 17px;
-	margin-left: 0;
+	/*margin-left: 0;*/
 }
 
 .three-steps{
@@ -141,7 +134,7 @@ h1{
 	color:#DDC724;
 }
 .position{
-	background: url(../img/where.png) 0 100% no-repeat;
+	/*background: url(../img/where.png) 0 100% no-repeat;*/
 	height:150px;
 	width: 170px;
 }
