@@ -208,5 +208,7 @@ h1{
 	.each-step{
 		display:block;
 	}
-	
+	.three-steps{
+		width:auto;
+	}
 }
