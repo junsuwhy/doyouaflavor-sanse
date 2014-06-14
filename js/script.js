@@ -21,11 +21,14 @@ $.extend( $.fn ,{
 				}
 			}
 			$(window).on("scroll",trig);
+			trig();
 
 			function offscroll(trig){
 				$(window).off("scroll",trig);
 			}
 		});
+
+		return this;
 	},
 	anifin:function(func){
 		this.each(function(){
@@ -55,6 +58,7 @@ $.extend( $.fn ,{
 				}
 			});
 		});
+		return this;
 	},
 	/**
 	 * 加上滑鼠移入的動畫
@@ -75,6 +79,7 @@ $.extend( $.fn ,{
 				},function(){}
 			)
 		});
+		return this;
 	},
 	clickAni:function(anistyle){
 		this.each(function(){
@@ -90,6 +95,7 @@ $.extend( $.fn ,{
 				}
 			)
 		});
+		return this;
 	},
 
 	/**
@@ -109,6 +115,7 @@ $.extend( $.fn ,{
 				}, s);
 			}
 		});
+		return this;
 	}
 });
 
@@ -125,6 +132,7 @@ $('.circle').hover(function(){
 if($(window).width()>960){
 	$('.header').xp();
 }
+
 
 for (var i = 1; i < 4; i++) {
 	var j=($(window).width()<960)?0:i;
@@ -143,4 +151,36 @@ setInterval(function(){
 // });
 
 
+
+//Egg XD
+//Please type baiwei.
+var str = "";
+$(window).keydown(function(e){
+	//b
+	if(e.which == 66)str="b";
+	if(e.which == 65 && str == "b")str="ba";
+	if(e.which == 73 && str == "ba")str="bai";
+	if(e.which == 87 && str == "bai")str="baiw";
+	if(e.which == 69 && str == "baiw")str="baiwe";
+	if(e.which == 73 && str == "baiwe"){
+		str="";
+		$('div').addClass('animated').addClass('tada');
+			setTimeout(function(){
+				$('div').removeClass('tada');
+			}, 2000);
+		setTimeout(function(){
+			$('p').addClass('animated').addClass('hinge');
+			$('.each-step').addClass('animated').addClass('hinge');
+			$('.logo').addClass('animated').addClass('hinge');
+			$('.block').addClass('animated').addClass('hinge');
+			setTimeout(function(){
+				$('p').removeClass('hinge').wjin('bounceInDown');
+				$('.each-step').removeClass('hinge').wjin('bounceInDown');
+				$('.logo').removeClass('hinge').wjin('bounceInDown');
+				$('.block').removeClass('hinge').wjin('bounceInDown');
+			}, 2000);
+		}, 1300);
+	}
+	console.log(e);
+});
 
