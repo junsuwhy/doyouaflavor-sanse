@@ -5,6 +5,11 @@ $.extend( $.fn ,{
 			this.addEventListener("animationend",func);
 		});
 	},
+	/**
+	 * 製造底圖視差滾動，貼於螢幕上
+	 * @param  {[type]} y [description]
+	 * @return {[type]}   [description]
+	 */
 	xp:function(y){
 		y=isNaN(parseFloat(y))?0:parseFloat(y);
 		var x = this;
@@ -17,6 +22,21 @@ $.extend( $.fn ,{
 					return $(window).scrollTop()-x.offset().top+y;
 				}
 			});
+		});
+	},
+	/**
+	 * 製造滑上來時，翻滾出現的動作
+	 * @param  {Number} s 晚幾毫秒
+	 * @return {[type]}   [description]
+	 */
+	ff:function(s){
+		var x = this;
+		$(window).scroll(function(event) {
+			if((x.offset().top - $(window).scrollTop())<($(window).height()-x.height())){
+				setTimeout(function(){
+					x.removeClass('hide').addClass('flipInX');
+				}, s);
+			}
 		});
 	}
 });
@@ -32,6 +52,8 @@ $('.circle').hover(function(){
 });
 
 $('.header').xp();
-
+for (var i = 1; i < 4; i++) {
+	$('.step'+i).ff(i*300);
+};
 
 
