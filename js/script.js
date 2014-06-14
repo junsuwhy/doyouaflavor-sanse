@@ -115,7 +115,7 @@ $('.circle').hover(function(){
 	}, 1000);
 });
 
-$('.header').xp();
+if($(window).width()>960)$('.header').xp();
 for (var i = 1; i < 4; i++) {
 	var j=($(window).width()<960)?0:i;
 	$('.step'+i).ff(j*300);

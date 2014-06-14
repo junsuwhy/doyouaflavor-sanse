@@ -50,17 +50,18 @@ h1,h2,.each-step{
  * 重要，小螢幕
  */
 @media (max-width :960px){
-	.wrapper{
+	body .wrapper{
 		width:auto;
 	}
-	.header{
+	body .header{
+		background-repeat-y: inherit ;
 		padding-top:30px;
-		height:auto !important;
-		-ms-background-position-x: 50% !important;
-		background-position-x: 50% !important;
+		height:auto ;
+		-ms-background-position-x: 50% ;
+		background-position-x: 50% ;
 	}
-	.block,.three-steps{
-		width:auto !important;
+	body .block,.three-steps{
+		width:auto ;
 	}
 }
 
