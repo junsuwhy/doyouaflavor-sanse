@@ -4,6 +4,7 @@
 body{
 	text-align: center;
 	font-size: 16px;
+	font-family: "Oswald","微軟正黑體",helvetica,arial,sans-serif;
 }
 h1{
 	font-size: 100px;
@@ -53,6 +54,7 @@ h1,h2,.each-step{
 		width:auto;
 	}
 	.header{
+		padding-top:30px;
 		height:auto !important;
 		-ms-background-position-x: 50% !important;
 		background-position-x: 50% !important;
@@ -186,10 +188,14 @@ h1{
 		margin: 0 auto;
 		float: none;
 	}
+	.logo.baiwei{
+		border-bottom: 5px #fff solid;
+	}
+	.logo.sanse{
+		margin-top:30px;
+	}
 	.logox{
-		height: 100px;
-		margin: -20px auto;
-		margin-bottom: 20px;
+		display:none;
 	}
 	.each-step{
 		display:block;
