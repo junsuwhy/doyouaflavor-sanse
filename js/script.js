@@ -117,7 +117,8 @@ $('.circle').hover(function(){
 
 $('.header').xp();
 for (var i = 1; i < 4; i++) {
-	$('.step'+i).ff(i*300);
+	var j=($(window).width()<960)?0:i;
+	$('.step'+i).ff(j*300);
 };
 
 $('.link>div').hoverAni('rubberBand');

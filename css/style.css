@@ -45,6 +45,23 @@ h1,h2,.each-step{
 .hide{
 	opacity: 0;
 }
+/**
+ * 重要，小螢幕
+ */
+@media (max-width :960px){
+	.wrapper{
+		width:auto;
+	}
+	.header{
+		height:auto !important;
+		-ms-background-position-x: 50% !important;
+		background-position-x: 50% !important;
+	}
+	.block,.three-steps{
+		width:auto !important;
+	}
+}
+
 
 /**
  * 各單元
@@ -156,4 +173,26 @@ h1{
 }
 .footer{
 	padding:;
+}
+/**
+ * 各單元 小螢幕
+ */
+@media (max-width :960px){
+	.story{
+		padding-bottom: 20px;
+	}
+	.logo,.logo.baiwei,.logo.sanse{
+		clear: both;
+		margin: 0 auto;
+		float: none;
+	}
+	.logox{
+		height: 100px;
+		margin: -20px auto;
+		margin-bottom: 20px;
+	}
+	.each-step{
+		display:block;
+	}
+	
 }
