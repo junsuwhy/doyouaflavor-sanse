@@ -180,6 +180,13 @@ h1{
  * 各單元 小螢幕
  */
 @media (max-width :960px){
+	.logo-wrapper{
+		-webkit-transform: scale(.7);
+				transform: scale(.7);
+				transform-origin: 50% 0;
+		-webkit-transform-origin: 50% 0;
+		height: 420px;
+	}
 	.story{
 		padding-bottom: 20px;
 	}
