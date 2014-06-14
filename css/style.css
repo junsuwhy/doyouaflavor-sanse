@@ -10,11 +10,17 @@ h1{
 	line-height: 100px;
 	display: inline-block;
 }
+h2{
+	font-size: 27px;
+}
 div{
 	margin:0 auto;
 }
 a{
 	text-decoration: none;
+}
+p{
+	margin:0 0 14px;
 }
 
 /**
@@ -117,12 +123,13 @@ h1{
 }
 .link>div{
 	display:inline-block;
+	padding: 12px;
 }
 .schedule{
-	border:3px #000 solid;
-	width:280px;
-	margin: 10px auto;
-	padding:20px;
+	border: 1px #333 solid;
+	width: 250px;
+	margin: 15px auto;
+	padding: 15px 10px;
 }
 .start-cook{
 	padding:12px;
@@ -134,8 +141,8 @@ h1{
 	color:#DDC724;
 }
 .position{
-	/*background: url(../img/where.png) 0 100% no-repeat;*/
-	height:150px;
+	background: url(../img/where.png) 0 100% no-repeat;
+	height:160px;
 	width: 170px;
 }
 .block3 h2{

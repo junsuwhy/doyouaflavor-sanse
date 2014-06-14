@@ -40,6 +40,40 @@ $.extend( $.fn ,{
 			}
 		});
 	},
+	/**
+	 * 加上滑鼠移入的動畫
+	 * @param  {[type]} anistyle [description]
+	 * @return {[type]}          [description]
+	 */
+	hoverAni:function(anistyle){
+		this.each(function(){
+			var $obj = $(this);
+			// console.log($obj);
+			$obj.hover(
+				function(){
+
+					$obj.addClass('animated').addClass(anistyle);
+					setTimeout(function(){
+						$obj.removeClass(anistyle);
+					}, 1000);
+				},function(){}
+			)
+			$obj.click(
+				function(){
+
+					$obj.addClass('animated').addClass(anistyle);
+					setTimeout(function(){
+						$obj.removeClass(anistyle);
+					}, 1000);
+				}
+			)
+		});
+	},
+	/**
+	 * 加入彈入動畫
+	 * @param  {[type]} s [description]
+	 * @return {[type]}   [description]
+	 */
 	bu:function(s){
 		var x = this;
 		x.addClass('hide');
@@ -69,6 +103,8 @@ $('.header').xp();
 for (var i = 1; i < 4; i++) {
 	$('.step'+i).ff(i*300);
 };
+
+$('.link>div').hoverAni('rubberBand');
 
 // $().ready(function(){
 // 	$('.position img').bu();	
