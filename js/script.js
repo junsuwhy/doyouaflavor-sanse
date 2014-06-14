@@ -69,6 +69,22 @@ $.extend( $.fn ,{
 			)
 		});
 	},
+	clickAni:function(anistyle){
+		this.each(function(){
+			var $obj = $(this);
+			// console.log($obj);
+			$obj.click(
+				function(){
+
+					$obj.addClass('animated').addClass(anistyle);
+					setTimeout(function(){
+						$obj.removeClass(anistyle);
+					}, 1000);
+				}
+			)
+		});
+	},
+
 	/**
 	 * 加入彈入動畫
 	 * @param  {[type]} s [description]
@@ -105,7 +121,9 @@ for (var i = 1; i < 4; i++) {
 };
 
 $('.link>div').hoverAni('rubberBand');
-
+setInterval(function(){
+	$('.position img').addClass('animated').toggleClass('bounce');
+},2000);
 // $().ready(function(){
 // 	$('.position img').bu();	
 // });

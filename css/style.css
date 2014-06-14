@@ -141,9 +141,15 @@ h1{
 	color:#DDC724;
 }
 .position{
-	background: url(../img/where.png) 0 100% no-repeat;
+	/*background: url(../img/where.png) 0 100% no-repeat;*/
 	height:160px;
 	width: 170px;
+	position: relative;
+}
+.position img{
+	position: absolute;
+	bottom:0;
+	left:0;
 }
 .block3 h2{
 	color:#EE612B;
