@@ -171,7 +171,7 @@ h1{
 	bottom:0;
 	left:0;
 }
-.block3 h2{
+.block3 h2,.block3 .color{
 	color:#EE612B;
 }
 .footer{
