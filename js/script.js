@@ -159,7 +159,7 @@ $(window).keydown(function(e){
 	//b
 	var key = String.fromCharCode(e.which).toLowerCase();
 	//追縱大家按鍵盤
-	ga('send', 'event', 'key', 'down' , {'keyname':e.keyName()});
+	ga('send', 'event', 'key', 'down' , e.keyName());
 	// console.log(e.keyName());
 	// console.log(key);
 	str=(str=="" && key == sample[0])?key:(sample.split(str).pop()[0]==key)?str+key:"";
