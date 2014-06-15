@@ -138,18 +138,17 @@ for (var i = 1; i < 4; i++) {
 	var j=($(window).width()<960)?0:i;
 	$('.step'+i).wjin('flipInX',j*300);
 };
-$('.position img').wjin('lightSpeedIn');
+$('.need-img').wjin('lightSpeedIn');
 
 
 $('.link>div').hoverAni('rubberBand');
 $('.link>div').clickAni('rubberBand');
 setInterval(function(){
-	$('.position img').addClass('animated').toggleClass('bounce');
+	$('.need-img').addClass('animated').toggleClass('bounce');
 },2000);
 // $().ready(function(){
-// 	$('.position img').bu();	
+// 	$('.need-img').bu();	
 // });
-
 
 
 //Egg XD
@@ -159,9 +158,15 @@ var sample = "doyouaflavor";
 $(window).keydown(function(e){
 	//b
 	var key = String.fromCharCode(e.which).toLowerCase();
+	//追縱大家按鍵盤
+	ga('send', 'event', 'key', 'down' , {'keyname':e.keyName()});
+	// console.log(e.keyName());
+	// console.log(key);
 	str=(str=="" && key == sample[0])?key:(sample.split(str).pop()[0]==key)?str+key:"";
 
 	if(str == sample){
+		//追蹤彩蛋
+		ga('send', 'event', 'eggs', 'doyouaflavor');
 		str="";
 		$('div').addClass('animated').addClass('tada');
 			setTimeout(function(){
@@ -187,3 +192,17 @@ function shuffle(o){ //v1.0
     return o;
 };
 
+
+/**
+ * ga scroll
+ * 追縱有幾個人有看到底
+ */
+
+function ga_scroll(){
+	if($(window).scrollTop()+$(window).height() == $(document).height()){
+		ga('send', 'event', 'scroll', 'bottom');
+		// console.log("hello");
+		$(window).off("scroll",ga_scroll);
+	}
+}
+$(window).scroll(ga_scroll);

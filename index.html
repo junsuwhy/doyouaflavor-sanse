@@ -4,10 +4,13 @@
 	<link rel="shortcut icon" href=".img/favicon.png" type="image/x-icon">
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<title>人生百味 - 剩食傳說</title>
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css" />
 	<link rel="stylesheet" href="css/bootstrap.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/animate.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="css/style.css" type="text/css" media="screen" />
 	<script src="js/jquery-1.10.2.js"></script>
+	<script src="js/jquerypp.js"></script>
+	<script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
 	<!-- <script src="js/bootstrap.js"></script> -->
 	<meta name="viewport" content="width=device-width">
 	<meta name="title" content="人生百味 - 剩食傳說" />
@@ -102,7 +105,8 @@
 		</div>
 		<div class="block block2">
 			<h2>時間地點</h2>
-			<div class="desc bolder">如果你是食材提供者，<br>可在這些時間拿到下列地點</div>
+			<div class="desc bolder"><p>如果你是食材提供者，<br>可在這些時間拿到下列地點</p></div>
+
 			<div class="schedule">
 				<div class="level1">
 					<span class="bolder">第一階段</span>&nbsp;米的目擊&nbsp;6/21-6/30</div>
@@ -111,7 +115,41 @@
 				<div class="start-cook"><span class="bolder">開煮&amp;發送</span>&nbsp;7/05(六)</div>
 			</div>
 			<div class="position bolder">地點
-				<img src="img/where.png" alt="">
+				
+				<!-- <p><span class="bolder">呷米共食廚房</span>&nbsp;(乾貨募集點)
+				<br>時間：6/28(六)&nbsp;1300-1700&nbsp;1930-2100
+				<div class="map-box" id="map-gyami"></div>
+					<script>
+					var map = L.map('map-gyami',{'scrollWheelZoom':false,}).setView([25.042415,121.513701], 16);
+					mapLink =
+					    '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+					  L.tileLayer(
+					    'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+					      attribution: 'Map data &copy; ' + mapLink,
+					      maxZoom: 18,
+					    }).addTo(map);
+					var marker = L.marker([25.042415,121.513701]).addTo(map);
+					</script>
+					</p>
+				<p><span class="bolder">綠蔬</span>&nbsp;(乾貨募集點) <br>
+					時間：6/30(一)&nbsp;1100-2000
+					<div class="map-box" id="map-vegelicia"></div>
+					<script>
+					var map = L.map('map-vegelicia',{'scrollWheelZoom':false,}).setView([25.019842,121.5315045], 16);
+					mapLink =
+					    '<a href="http://openstreetmap.org">OpenStreetMap</a>';
+					  L.tileLayer(
+					    'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+					      attribution: 'Map data &copy; ' + mapLink,
+					      maxZoom: 18,
+					    }).addTo(map);
+					var marker = L.marker([25.019842,121.5315045]).addTo(map);
+					</script>
+					</p> -->
+				<div>
+					<img class="need-img" src="img/where.png" alt="">
+				</div>
+
 			</div>
 		</div>
 		<div class="block block3">

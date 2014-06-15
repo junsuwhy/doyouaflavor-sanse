@@ -162,12 +162,12 @@ h1{
 }
 .position{
 	/*background: url(../img/where.png) 0 100% no-repeat;*/
-	height:160px;
-	width: 170px;
-	position: relative;
+	/*height:160px;*/
+	/*width: 170px;*/
+	/*position: relative;*/
 }
-.position img{
-	position: absolute;
+.need-img{
+	/*position: absolute;*/
 	bottom:0;
 	left:0;
 }
@@ -175,7 +175,7 @@ h1{
 	color:#EE612B;
 }
 .footer{
-	padding:;
+	/*padding:;*/
 }
 /**
  * 各單元 小螢幕
@@ -212,3 +212,11 @@ h1{
 		width:auto;
 	}
 }
+/**
+ * 地圖
+ */
+.map-box{
+	width:240px;
+	height:160px;
+}
+
