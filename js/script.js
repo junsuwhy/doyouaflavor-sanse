@@ -153,34 +153,52 @@ setInterval(function(){
 
 
 //Egg XD
-//Please type baiwei.
+//Please type doyouaflavor.
 var str = "";
+var sample = "doyouaflavor";
 $(window).keydown(function(e){
 	//b
-	if(e.which == 66)str="b";
-	if(e.which == 65 && str == "b")str="ba";
-	if(e.which == 73 && str == "ba")str="bai";
-	if(e.which == 87 && str == "bai")str="baiw";
-	if(e.which == 69 && str == "baiw")str="baiwe";
-	if(e.which == 73 && str == "baiwe"){
+	var key = String.fromCharCode(e.which).toLowerCase();
+	str=(str=="" && key == sample[0])?key:(sample.split(str).pop()[0]==key)?str+key:"";
+	// if(str=="" && key == sample[0]){
+	// 	str=key;
+	// }else{
+	// 	str = (sample.split(str).pop()[0]==key)?str+key:"";
+	// }
+
+	// console.log("str="+str);
+	// console.log("sample.split(str).pop()[0]="+sample.split(str).pop()[0])
+
+	
+	// if(e.which == 66)str="b";
+	// if(e.which == 65 && str == "b")str="ba";
+	// if(e.which == 73 && str == "ba")str="bai";
+	// if(e.which == 87 && str == "bai")str="baiw";
+	// if(e.which == 69 && str == "baiw")str="baiwe";
+	// if(e.which == 73 && str == "baiwe")
+	if(str == sample){
 		str="";
 		$('div').addClass('animated').addClass('tada');
 			setTimeout(function(){
 				$('div').removeClass('tada');
-			}, 2000);
+			}, 1000);
 		setTimeout(function(){
-			$('p').addClass('animated').addClass('hinge');
-			$('.each-step').addClass('animated').addClass('hinge');
-			$('.logo').addClass('animated').addClass('hinge');
-			$('.block').addClass('animated').addClass('hinge');
+			$(shuffle($('p,.each-step,.logo,.block'))).each(function(i){
+				var $th = $(this);
+				console.log(i);
+				setTimeout(function(){
+					$th.addClass('animated').addClass('hinge');
+				}, i*50);
+			});
 			setTimeout(function(){
-				$('p').removeClass('hinge').wjin('bounceInDown');
-				$('.each-step').removeClass('hinge').wjin('bounceInDown');
-				$('.logo').removeClass('hinge').wjin('bounceInDown');
-				$('.block').removeClass('hinge').wjin('bounceInDown');
-			}, 2000);
+				$('p,.each-step,.logo,.block').removeClass('hinge').wjin('bounceInDown');
+			}, 3000);
 		}, 1300);
 	}
-	console.log(e);
 });
+
+function shuffle(o){ //v1.0
+    for(var j, x, i = o.length; i; j = Math.floor(Math.random() * i), x = o[--i], o[i] = o[j], o[j] = x);
+    return o;
+};
 
