@@ -160,22 +160,7 @@ $(window).keydown(function(e){
 	//b
 	var key = String.fromCharCode(e.which).toLowerCase();
 	str=(str=="" && key == sample[0])?key:(sample.split(str).pop()[0]==key)?str+key:"";
-	// if(str=="" && key == sample[0]){
-	// 	str=key;
-	// }else{
-	// 	str = (sample.split(str).pop()[0]==key)?str+key:"";
-	// }
 
-	// console.log("str="+str);
-	// console.log("sample.split(str).pop()[0]="+sample.split(str).pop()[0])
-
-	
-	// if(e.which == 66)str="b";
-	// if(e.which == 65 && str == "b")str="ba";
-	// if(e.which == 73 && str == "ba")str="bai";
-	// if(e.which == 87 && str == "bai")str="baiw";
-	// if(e.which == 69 && str == "baiw")str="baiwe";
-	// if(e.which == 73 && str == "baiwe")
 	if(str == sample){
 		str="";
 		$('div').addClass('animated').addClass('tada');
