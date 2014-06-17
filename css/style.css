@@ -14,6 +14,9 @@ h1{
 h2{
 	font-size: 27px;
 }
+h3{
+	font-size: 17px;
+}
 div{
 	margin:0 auto;
 }
@@ -27,7 +30,7 @@ p{
 /**
  * 重要
  */
-h1,h2,.each-step{
+h1,h2,.each-step,.pos-div{
 	font-family: 'ヒラギノ明朝 Pro W3','Hiragino Mincho Pro','HiraMinProN-W3','ＭＳ 明朝','MS Mincho',serif;
 }
 .wrapper{
@@ -136,7 +139,7 @@ h1{
 	line-height:24px;
 }
 .block1 .color,.block1 h2{
-	color:#148E81;
+	color:#148E81; /*Green*/
 }
 .block1 .color{
 	font-weight: bolder;
@@ -158,7 +161,7 @@ h1{
 	padding-bottom: 0;
 }
 .block2 h2{
-	color:#DDC724;
+	color:#DDC724; /*Yellow*/
 }
 .position{
 	/*background: url(../img/where.png) 0 100% no-repeat;*/
@@ -172,7 +175,7 @@ h1{
 	left:0;
 }
 .block3 h2,.block3 .color{
-	color:#EE612B;
+	color:#EE612B; /*red*/
 }
 .footer{
 	/*padding:;*/
@@ -213,8 +216,18 @@ h1{
 	}
 }
 /**
- * 地圖
+ * 地圖跟店家
  */
+.pos-div{
+	display:inline-block;
+	width:260px;
+}
+.text-gyami,.text-gyami a{
+	color:#148E81;
+}
+.text-vegelicia,.text-vegelicia a{
+	color:#DDC724; 
+}
 .map-box{
 	width:240px;
 	height:160px;
