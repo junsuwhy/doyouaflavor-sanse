@@ -214,6 +214,9 @@ h1{
 	.three-steps{
 		width:auto;
 	}
+	.pos-div{
+		display:block;
+	}
 }
 /**
  * 地圖跟店家
