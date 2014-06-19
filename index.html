@@ -117,7 +117,9 @@
 			<div class="position bolder"><h3>地點</h3>
 				<script type="text/javascript">
 				function add_map(map_name,x,y){
-					var map = L.map(map_name,{'scrollWheelZoom':false,}).setView([x,y], 16);
+					var map = L.map(map_name,{'scrollWheelZoom':false,}).setView([x,y], 16).on('click', function(e) {
+						    ga('send', 'event', 'click', 'map', map_name);
+						});
 						mapLink =
 						    '<a href="http://openstreetmap.org">OpenStreetMap</a>';
 						  L.tileLayer(
