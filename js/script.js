@@ -175,7 +175,7 @@ $(window).keydown(function(e){
 		setTimeout(function(){
 			$(shuffle($('p,.each-step,.logo,.block'))).each(function(i){
 				var $th = $(this);
-				console.log(i);
+				// console.log(i);
 				setTimeout(function(){
 					$th.addClass('animated').addClass('hinge');
 				}, i*50);

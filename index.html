@@ -115,12 +115,9 @@
 				<div class="start-cook"><span class="bolder">開煮&amp;發送</span>&nbsp;7/05(六)</div>
 			</div>
 			<div class="position bolder"><h3>地點</h3>
-				<div class="pos-div">
-					<p class="text-gyami"><span class="bolder"><a href="https://www.facebook.com/Ricerevolutioneco" target="_blank" onClick="ga('send', 'event', 'click', 'out', 'gyami');">呷米共食廚房</a></span>&nbsp;(乾貨募集點)
-					<br>時間：6/28(六) <br>13:00-17:00 <br>19:30-21:00
-					<div class="map-box" id="map-gyami"></div>
-						<script>
-						var map = L.map('map-gyami',{'scrollWheelZoom':false,}).setView([25.042415,121.513701], 16);
+				<script type="text/javascript">
+				function add_map(map_name,x,y){
+					var map = L.map(map_name,{'scrollWheelZoom':false,}).setView([x,y], 16);
 						mapLink =
 						    '<a href="http://openstreetmap.org">OpenStreetMap</a>';
 						  L.tileLayer(
@@ -128,7 +125,15 @@
 						      attribution: 'Map data &copy; ' + mapLink,
 						      maxZoom: 18,
 						    }).addTo(map);
-						var marker = L.marker([25.042415,121.513701]).addTo(map);
+						var marker = L.marker([x,y]).addTo(map);
+				}
+				</script>
+				<div class="pos-div">
+					<p class="text-gyami"><span class="bolder"><a href="https://www.facebook.com/Ricerevolutioneco" target="_blank" onClick="ga('send', 'event', 'click', 'out', 'gyami');">呷米共食廚房</a></span>&nbsp;(乾貨募集點)
+					<br>時間：6/28(六) <br>13:00-17:00 <br>19:30-21:00
+					<div class="map-box" id="map-gyami"></div>
+						<script>
+						add_map('map-gyami',25.042415,121.513701);
 						</script>
 						</p>
 				</div>
@@ -137,15 +142,25 @@
 						時間：6/30(一) <br>11:00-20:00<br>&nbsp;
 						<div class="map-box" id="map-vegelicia"></div>
 						<script>
-						var map = L.map('map-vegelicia',{'scrollWheelZoom':false,}).setView([25.019842,121.5315045], 16);
-						mapLink =
-						    '<a href="http://openstreetmap.org">OpenStreetMap</a>';
-						  L.tileLayer(
-						    'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-						      attribution: 'Map data &copy; ' + mapLink,
-						      maxZoom: 18,
-						    }).addTo(map);
-						var marker = L.marker([25.019842,121.5315045]).addTo(map);
+						add_map('map-vegelicia',25.019842,121.5315045);
+						</script>
+						</p>
+				</div>
+				<div class="pos-div">
+					<p class="text-foodmayor"><span class="bolder"><a href="https://www.facebook.com/foodmayor" target="_blank" onClick="ga('send', 'event', 'click', 'out', 'foodmayor');">社區菜市長</a></span>&nbsp;(乾貨與生鮮募集點) <br>
+						時間：(一)~(五) <br>09:00-19:00
+						<div class="map-box" id="map-foodmayor"></div>
+						<script>
+						add_map('map-foodmayor',25.006741,121.522525);
+						</script>
+						</p>
+				</div>
+				<div class="pos-div">
+					<p class="text-aprils"><span class="bolder"><a href="https://www.facebook.com/aprilsgoodies" target="_blank" onClick="ga('send', 'event', 'click', 'out', 'aprilsgoodies');">唐青古物商行</a></span>&nbsp;(乾貨與生鮮募集點) <br>
+						時間：7/2(三) <br>16:00-21:00
+						<div class="map-box" id="map-aprils"></div>
+						<script>
+						add_map('map-aprils',25.031354,121.520429);
 						</script>
 						</p>
 				</div>

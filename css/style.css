@@ -231,6 +231,12 @@ h1{
 .text-vegelicia,.text-vegelicia a{
 	color:#DDC724; 
 }
+.text-foodmayor,.text-foodmayor a{
+	color:#EE612B;
+}
+.text-aprils,.text-aprils a{
+	color:#148E81;
+}
 .map-box{
 	width:240px;
 	height:160px;
