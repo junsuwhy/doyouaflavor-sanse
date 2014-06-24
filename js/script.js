@@ -149,6 +149,9 @@ setInterval(function(){
 // $().ready(function(){
 // 	$('.need-img').bu();	
 // });
+// 
+
+$('.position p a').hoverAni('pulse');
 
 
 //Egg XD

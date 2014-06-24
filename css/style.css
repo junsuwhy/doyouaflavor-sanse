@@ -44,6 +44,7 @@ h1,h2,.each-step,.pos-div{
 	width:600px;
 }
 .bolder{
+	font-size: 21px;
 	font-weight: bolder;
 }
 .hide{
