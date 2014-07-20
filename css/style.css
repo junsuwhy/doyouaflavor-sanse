@@ -1,10 +1,17 @@
 /**
+@font-face {
+font-family: Noto;
+src: url("../font/NotoSansHant.otf") format("opentype");
+}
+*/
+
+/**
  * 環原
  */
 body{
 	text-align: center;
 	font-size: 16px;
-	font-family: "Oswald","微軟正黑體",helvetica,arial,sans-serif;
+	font-family: Noto,"Oswald","微軟正黑體",helvetica,arial,sans-serif;
 }
 h1{
 	font-size: 100px;
@@ -53,16 +60,15 @@ h1,h2,.each-step,.pos-div{
 /**
  * 重要，小螢幕
  */
-@media (max-width :960px){
+@media (max-width :950px){
 	body .wrapper{
 		width:auto;
 	}
 	body .header{
-		background-repeat-y: inherit ;
-		padding-top:30px;
-		height:auto ;
+		background-repeat-y: inherit;
 		-ms-background-position-x: 50% ;
-		background-position-x: 50% ;
+		background-position-x: 0;
+		height: 624px;
 	}
 	body .block,.three-steps{
 		width:auto ;
@@ -74,11 +80,11 @@ h1,h2,.each-step,.pos-div{
  * 各單元
  */
 .header{
-	background: url(../img/header.png) no-repeat;
+	background: url(../img/web-banner-july.jpg) no-repeat;
 	/*padding:0px 24px;*/
 	/*background:#000000 ;*/
 	/*line-height: 600px;*/
-	text-align: center;
+	text-align: left;
 	height:624px;
 	position: relative;
 }
@@ -122,16 +128,24 @@ h1{
 .story{
 	clear:both;
 	/*width:340px;*/
-	color:#ffffff;
-	font-size: 17px;
+	color:#000000;
+	font-size: 14px;
+	width: 485px;
+	position: absolute;
+	left: 450px;
+	top: 470px;
+	font-weight: bold;
 	/*margin-left: 0;*/
+}
+.story p{
+	margin:0;
 }
 
 .three-steps{
-	padding: 29px;
 	width: 600px;
 	margin: 0 auto;
 	display:inline-block;
+	padding:29px;
 }
 .each-step{
 	display:inline-block;
@@ -167,7 +181,7 @@ h1{
 .position{
 	/*background: url(../img/where.png) 0 100% no-repeat;*/
 	/*height:160px;*/
-	/*width: 170px;*/
+	width: 300px;
 	/*position: relative;*/
 }
 .need-img{
@@ -184,7 +198,7 @@ h1{
 /**
  * 各單元 小螢幕
  */
-@media (max-width :960px){
+@media (max-width :950px){
 	.logo-wrapper{
 		-webkit-transform: scale(.7);
 				transform: scale(.7);
@@ -194,6 +208,11 @@ h1{
 	}
 	.story{
 		padding-bottom: 20px;
+		left: 0px;
+		top: 660px;
+		text-align: center;
+		width: 100%;
+		font-size: 15px;
 	}
 	.logo,.logo.baiwei,.logo.sanse{
 		clear: both;
@@ -214,6 +233,7 @@ h1{
 	}
 	.three-steps{
 		width:auto;
+		margin-top:160px;
 	}
 	.pos-div{
 		display:block;
@@ -232,14 +252,19 @@ h1{
 .text-vegelicia,.text-vegelicia a{
 	color:#DDC724; 
 }
-.text-foodmayor,.text-foodmayor a{
-	color:#EE612B;
+.text-foodmayor,.text-foodmayor a,
+.text-eirakuza,.text-eirakuza a{
+	color:#EE612B; /*red*/
 }
 .text-aprils,.text-aprils a{
-	color:#148E81;
+	color:#148E81; /*green*/
 }
-.text-ryou,.text-ryou a{
-	color:#DDC724; 
+.text-ryou,.text-ryou a,
+.cook-date p{
+	color:#DDC724;  /*yellow*/
+}
+.cook-date p{
+	font-size: 25px;
 }
 .map-box{
 	width:240px;
